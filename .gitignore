@@ -1,0 +1,51 @@
+# .gitignore
+# Ignore Python virtual environments
+venv/
+env/
+
+# Ignore Python bytecode and cache
+__pycache__/
+*.pyc
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+.dist/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build and distribution artifacts
+build/
+
+*.egg-info/
+
+# Ignore log files and temporary files from LaTeX compilation
+*.log
+*.aux
+*.out
+*.synctex.gz
+
+# Environment and packaging
+.env
+.env.local
+.venv/
+
+build/
+# PyInstaller artifacts
+*.spec
+
+
+dist/
+build/
+.venv/
+__pycache__/
+*.exe
+*.log
+
+IA_Sentiment_package.zip
+*.zip
+
+IA_Sentiment_package.zip
+*.zip

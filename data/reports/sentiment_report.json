@@ -1,0 +1,497 @@
+[
+    {
+        "headline": "Tesla Wants a $50,000 Penalty for Anyone Who Tries to Resell Its Signature Model S and X",
+        "url": "https://gizmodo.com/tesla-wants-a-50000-penalty-for-anyone-who-tries-to-resell-its-signature-model-s-and-x-2000747590",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla Recalls Cybertrucks Over Concerns Their Wheels Could Come Off",
+        "url": "https://gizmodo.com/tesla-recalls-cybertrucks-over-concerns-their-wheels-could-come-off-2000756284",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla Says EV Orders Benefitted From Soaring Gas Prices",
+        "url": "https://gizmodo.com/tesla-says-ev-orders-benefitted-from-soaring-gas-prices-2000749762",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla Drivers Can Finally Activate Grok Without Looking Down at a Screen",
+        "url": "https://gizmodo.com/great-news-tesla-drivers-can-finally-activate-grok-without-looking-down-at-a-screen-2000745999",
+        "consensus_sentiment": "positive",
+        "confidence": 0.33,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Tesla Reveals Mysterious $2 Billion AI Hardware Deal in SEC Filing",
+        "url": "https://gizmodo.com/tesla-reveals-mysterious-2-billion-ai-hardware-deal-in-sec-filing-2000750025",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "SpaceX Becoming a Publicly Traded Company May Rob Elon Musk of a Cool Source of Easy Cash",
+        "url": "https://gizmodo.com/spacex-becoming-a-publicly-traded-company-may-rob-elon-musk-of-a-cool-source-of-easy-cash-2000748851",
+        "consensus_sentiment": "positive",
+        "confidence": 0.33,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Tesla Technically Launched Robotaxis in Dallas and Houston (Just in Time for Quarterly Earnings)",
+        "url": "https://gizmodo.com/tesla-technically-launched-robotaxis-in-dallas-and-houston-just-in-time-for-quarterly-earnings-2000748611",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "BMW’s New iX3 Gets Up to 434 Miles on a Charge, Will Retail for $63,000",
+        "url": "https://gizmodo.com/bmws-new-ix3-gets-up-to-434-miles-on-a-charge-will-retail-for-63000-2000756178",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "California Cops Can Finally Give Robotaxis Tickets",
+        "url": "https://gizmodo.com/california-cops-can-finally-give-robotaxis-tickets-2000752774",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla Is Reportedly Working on a Cheaper Electric SUV Model",
+        "url": "https://www.cnet.com/home/electric-vehicles/report-teslas-working-on-a-cheaper-compact-suv-model/",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "A market analyst shares why he thinks Tesla is the 'single greatest stock short' in market history",
+        "url": "https://www.businessinsider.com/tesla-stock-short-bearish-elon-musk-options-trading-markets-tsla-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.33,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Elon Musk pushed back the launch of the Tesla Roadster. Again.",
+        "url": "https://www.businessinsider.com/elon-musk-delays-tesla-roadster-release-demo-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "Tesla slips one-sentence disclosure of a mysterious $2 billion AI hardware acquisition into its latest filing",
+        "url": "https://www.businessinsider.com/tesla-mystery-ai-hardware-company-acquisition-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "4 Tesla owners react to their FSD dreams getting crushed: 'It feels like a bait and switch'",
+        "url": "https://www.businessinsider.com/4-tesla-owners-react-to-their-fsd-dreams-getting-crushed-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "EV bloodbath: US sales plunge as Tesla tightens its grip",
+        "url": "https://www.businessinsider.com/ev-shakeout-us-market-tesla-toyota-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.33,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Watch the Cybercab robotaxi roll off Tesla's production line",
+        "url": "https://www.businessinsider.com/tesla-cybercab-robotaxi-production-video-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "Sorry to owners of older Teslas — your car won't be fully autonomous",
+        "url": "https://www.businessinsider.com/older-tesla-hardware3-fully-autonomous-self-driving-trade-in-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla's robotaxi timeline just got a little fuzzier",
+        "url": "https://www.businessinsider.com/teslas-robotaxi-timeline-just-got-a-little-fuzzier-2026-4",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Ex-Tesla president says he mimicked Domino's online pizza ordering to boost sales",
+        "url": "https://www.businessinsider.com/ex-tesla-president-dominos-pizza-car-sales-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "He coined 'vibe coding.' Now he says there's a 'growing gap' among AI users",
+        "url": "https://www.businessinsider.com/andrej-karpathy-growing-gap-ai-understanding-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Elon Musk's security bill keeps on rising",
+        "url": "https://www.businessinsider.com/elon-musk-tesla-security-bill-ceo-safety-threats-2026-5",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "The bill for Tesla's AI expansion just keeps getting bigger",
+        "url": "https://www.businessinsider.com/the-bill-for-teslas-ai-expansion-just-keeps-getting-bigger-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "I was in the courthouse when Elon Musk testified in his case against OpenAI. Here is what it was like.",
+        "url": "https://www.businessinsider.com/elon-musk-testimony-openai-trial-inside-courthouse-2026-5",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "Tesla filed a trademark for a new Roadster logo ahead of the EV's long-awaited reveal",
+        "url": "https://www.businessinsider.com/tesla-roadster-logo-trademark-2026-5",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "OpenAI founder recalls drinking whiskey with Amber Heard at Musk's 'haunted mansion' — then a fight over control",
+        "url": "https://www.businessinsider.com/openai-greg-brockman-testifies-elon-musk-haunted-mansion-amber-heard-2026-5",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "A passenger said his Tesla robotaxi missed a turn and tried to pull over on the highway",
+        "url": "https://www.businessinsider.com/tesla-robotaxi-passenger-it-tried-to-pull-over-on-highway-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "Why Is It So Hard to Fix an Electric Bike? (2026)",
+        "url": "https://www.wired.com/story/why-is-it-so-hard-to-fix-an-electric-bike/",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Thousands of Tesla Owners Demand $7,500 Refunds After FSD Launch Locks Them Out",
+        "url": "https://www.autoblog.com/news/thousands-of-tesla-owners-demand-7500-refunds-after-fsd-launch-locks-them-out",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "A DOGE Affiliate Is Now in Charge of the US Government's ID Platform",
+        "url": "https://www.wired.com/story/a-doge-affiliate-is-now-in-charge-of-the-us-governments-id-platform/",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "2026 Rivian R2 Performance vs. 2026 Tesla Model Y: Which Crossover EV Should You Choose?",
+        "url": "https://www.autoblog.com/features/2026-rivian-r2-performance-vs-2026-tesla-model-y-which-crossover-ev-should-you-choose",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Polestar 3 SUV Deals Target Tesla Owners With Massive $21K Discount",
+        "url": "https://www.autoblog.com/news/polestar-3-tesla-conquest-incentive",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "After Sales Stall at the Start of 2026, Lucid Drops Production Target",
+        "url": "https://gizmodo.com/after-sales-stall-at-the-start-of-2026-lucid-drops-production-target-2000755359",
+        "consensus_sentiment": "negative",
+        "confidence": 0.33,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "We now have a price tag for Elon Musk's ambitious Texas chip project",
+        "url": "https://www.businessinsider.com/spacex-terafab-project-cost-texas-elon-musk-2026-5",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "Tesla’s $50,000 Resale Penalty Turns Luxury EVs Into A Hostage Situation",
+        "url": "https://www.gadgetreview.com/teslas-50000-resale-penalty-turns-luxury-evs-into-a-hostage-situation",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "High gas prices are not saving Tesla. They are just slowing the bleeding.",
+        "url": "https://thenextweb.com/news/high-gas-prices-are-not-saving-tesla-they-are-just-slowing-the-bleeding/",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "4 things you missed from Elon Musk's testy second day on the stand at OpenAI trial",
+        "url": "https://www.businessinsider.com/things-you-missed-from-elon-musks-testy-testimony-openai-trial-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla driver reveals 52k miles of EV driving cost him $2,300; Gas cost for 52k miles? Much more",
+        "url": "https://autos.yahoo.com/ev-and-future-tech/articles/tesla-driver-reveals-52k-miles-220000753.html",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "Why Your Kindle Could Soon Be A Paperweight And Your Tesla Is Next",
+        "url": "https://www.forbes.com/sites/charlesradclyffe/2026/04/13/why-your-kindle-could-soon-be-a-paperweight-and-your-tesla-is-next/",
+        "consensus_sentiment": "negative",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Electric pickups were supposed to be the future. Now they're stalling.",
+        "url": "https://www.businessinsider.com/electric-pickups-us-sales-drop-ev-tesla-cyberstruck-ford-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.33,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Family of Celeste Rivas Hernandez speaks out after D4vd charged with murder",
+        "url": "https://abcnews.com/US/family-celeste-rivas-hernandez-speaks-after-d4vd-charged/story?id=132245552",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "D4vd charged with murder in 'brutal and horrific' death of teen: DA",
+        "url": "https://abcnews.com/US/charges-expected-filed-monday-d4vd-alleged-murder-teen/story?id=132205678",
+        "consensus_sentiment": "negative",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "New Mercedes EQS Has Long Range, Quick Charging, and Quicker Steering",
+        "url": "https://gizmodo.com/new-mercedes-eqs-has-long-range-quick-charging-and-quicker-steering-2000746403",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "‘The Meta Brand Is Not Something People Want to Put Anywhere Near Their Face,’ Says Snapchat CEO",
+        "url": "https://gizmodo.com/the-meta-brand-is-not-something-people-want-to-put-anywhere-near-their-face-says-snapchat-ceo-2000745652",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Things Are Finally Looking Up for Intel and It Has CPUs to Thank for It",
+        "url": "https://gizmodo.com/things-are-finally-looking-up-for-intel-and-it-has-cpus-to-thank-for-it-2000750198",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Only 173? Tesla Cybertruck RWD Recall Reveals Low Sales",
+        "url": "https://www.motortrend.com/news/tesla-cybertruck-rwd-recall-brake-rotor",
+        "consensus_sentiment": "negative",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "How Tesla Model Y Keeps a 93-Year-Old Driver Behind the Wheel and Going to Church in San Diego",
+        "url": "https://www.motorbiscuit.com/how-teslas-fsd-is-keeping-a-93-year-old-driver-behind-the-wheel-and-stress-free/",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "The Hardware in Your Pre-2023 Tesla Will Never Allow It to Fully Drive Itself, Elon Musk Admits",
+        "url": "https://gizmodo.com/the-hardware-in-your-pre-2023-tesla-will-never-allow-it-to-fully-drive-itself-elon-musk-admits-2000749809",
+        "consensus_sentiment": "negative",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Singer D4vd arrested after teen found dead in his Tesla: Police",
+        "url": "https://abcnews.com/US/singer-d4vd-arrested-after-teen-found-dead-tesla/story?id=127687961",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Elon Musk asked Greg Brockman to settle days before OpenAI trial, court filings show",
+        "url": "https://www.businessinsider.com/elon-musk-open-ai-trial-offered-settlement-to-brockman-2026-5",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Elon Musk says government checks are the 'best way' to deal with AI job losses — experts aren't so sure",
+        "url": "https://www.businessinsider.com/elon-musk-universal-high-income-government-checks-ai-job-losses-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "Elon Musk says government checks for all wouldn't spike inflation. Economist Steve Hanke says that's not guaranteed.",
+        "url": "https://www.businessinsider.com/elon-musk-steve-hanke-universal-high-income-inflation-ai-unemployment-2026-4",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Cybercab Begins Production, but Elon Musk Says It Will Be 'Very Slow' to Start",
+        "url": "https://www.cnet.com/roadshow/news/tesla-cybercab-begins-production/",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "SpaceX and Other Elon Musk Companies Are Propping Up Cybertruck Sales",
+        "url": "https://gizmodo.com/spacex-and-other-elon-musk-companies-are-propping-up-cybertruck-sales-2000747459",
+        "consensus_sentiment": "positive",
+        "confidence": 0.33,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "negative"
+    },
+    {
+        "headline": "Elon Musk and Sam Altman are headed to court. Meet the 9 players to watch.",
+        "url": "https://www.businessinsider.com/openai-trial-witnesess-who-will-testify-musk-altman-nadella-brockman-2026-4",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "As trial against OpenAI begins, Elon Musk seeks Sam Altman's ouster",
+        "url": "https://www.npr.org/2026/04/28/nx-s1-5801438/musk-altman-openai-trial-opening-statements",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    }
+]

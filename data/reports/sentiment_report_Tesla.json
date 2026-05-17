@@ -1,0 +1,47 @@
+[
+    {
+        "headline": "Tesla Wants a $50,000 Penalty for Anyone Who Tries to Resell Its Signature Model S and X",
+        "url": "https://gizmodo.com/tesla-wants-a-50000-penalty-for-anyone-who-tries-to-resell-its-signature-model-s-and-x-2000747590",
+        "consensus_sentiment": "negative",
+        "confidence": 0.33,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla Recalls Cybertrucks Over Concerns Their Wheels Could Come Off",
+        "url": "https://gizmodo.com/tesla-recalls-cybertrucks-over-concerns-their-wheels-could-come-off-2000756284",
+        "consensus_sentiment": "neutral",
+        "confidence": 0.67,
+        "vader_sentiment": "negative",
+        "textblob_sentiment": "neutral",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla Says EV Orders Benefitted From Soaring Gas Prices",
+        "url": "https://gizmodo.com/tesla-says-ev-orders-benefitted-from-soaring-gas-prices-2000749762",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "neutral"
+    },
+    {
+        "headline": "Tesla Reveals Mysterious $2 Billion AI Hardware Deal in SEC Filing",
+        "url": "https://gizmodo.com/tesla-reveals-mysterious-2-billion-ai-hardware-deal-in-sec-filing-2000750025",
+        "consensus_sentiment": "positive",
+        "confidence": 1.0,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "positive"
+    },
+    {
+        "headline": "SpaceX Becoming a Publicly Traded Company May Rob Elon Musk of a Cool Source of Easy Cash",
+        "url": "https://gizmodo.com/spacex-becoming-a-publicly-traded-company-may-rob-elon-musk-of-a-cool-source-of-easy-cash-2000748851",
+        "consensus_sentiment": "positive",
+        "confidence": 0.67,
+        "vader_sentiment": "positive",
+        "textblob_sentiment": "positive",
+        "transformer_sentiment": "negative"
+    }
+]

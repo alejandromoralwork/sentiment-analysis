@@ -1,0 +1,147 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+\newcommand{\pkg}[1]{\texttt{#1}}
+
+\title{1.1.2 Development Phase / Reflection Phase}
+\subtitle{Sentiment analysis from news articles - Project: Artificial Intelligence
+(DLBDSEAIS02)
+}
+\author{Alejandro Moral Aranda}
+\date{\href{https://github.com/alejandromoralwork/sentiment-analysis}{GitHub Link}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Short overview}
+The conception from phase 1 was turned into a working tool. The app fetches news by keyword, gets the full article text, runs sentiment analysis with three models, and saves the result for later review. I kept the implementation small and practical, because the goal was a usable student project with reasonable performance.
+\end{frame}
+
+\begin{frame}{Frameworks and tools}
+\begin{itemize}
+    \item \href{https://fastapi.tiangolo.com/}{FastAPI} for the backend and WebSocket messages.
+    \item \href{https://newsapi.org/}{NewsAPI} for recent news articles.
+    \item \href{https://www.crummy.com/software/BeautifulSoup/bs4/doc/}{BeautifulSoup} for HTML text extraction.
+    \item \href{https://www.nltk.org/vader.html}{VADER}, \href{https://textblob.readthedocs.io/}{TextBlob}, and \href{https://huggingface.co/docs/transformers/index}{Transformers} for sentiment analysis.
+    \item \href{https://pandas.pydata.org/}{pandas} for CSV output.
+    \item \href{https://www.chartjs.org/}{Chart.js} and \href{https://tailwindcss.com/}{Tailwind CSS} for the frontend.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Setup of the project}
+The first step was getting the app structure ready and installing the packages. The backend runs in app.py, and src/main.py is a local runner for testing the pipeline offline. The code is organized in small pieces for readability.
+
+Important files:
+\begin{itemize}
+    \item app.py - FastAPI server and WebSocket handler
+    \item src/news_fetcher.py - NewsAPI integration and text extraction
+    \item src/sentiment.py - preprocessing and sentiment models
+    \item src/reporting.py - saves results to CSV and JSON
+    \item templates/index.html and templates/script.js - web dashboard
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Implementation flow}
+The main flow works like this:
+
+\begin{enumerate}
+    \item User enters a keyword.
+    \item Fetch articles from NewsAPI.
+    \item Download the article page and extract clean text.
+    \item Run VADER, TextBlob, and transformer models on the text.
+    \item Take the consensus vote and calculate confidence.
+    \item Save the result as JSON and CSV reports.
+    \item Show live progress updates in the browser at each step.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Implemented components}
+The diagram from the conception phase is now real code. The app does this:
+\begin{enumerate}
+    \item User gives a keyword.
+    \item NewsAPI returns article links.
+    \item The article HTML is downloaded and cleaned.
+    \item The text is preprocessed to remove noise.
+    \item All three models analyze the same text.
+    \item The app stores a final consensus label.
+    \item The report is saved and shown in the dashboard.
+\end{enumerate}
+The websocket part is useful because the user can see what is going on while the analysis is running.
+\end{frame}
+
+\begin{frame}{Code and models}
+The code includes three sentiment analysis models:
+
+\begin{itemize}
+    \item \textbf{VADER} (Valence Aware Dictionary and sEntiment Reasoner) - lexicon-based approach.
+    \item \textbf{TextBlob} - simple polarity and subjectivity scoring.
+    \item \textbf{RoBERTa sentiment model} - neural model for context-aware analysis.
+\end{itemize}
+
+Each model analyzes the full article text. The app then votes on a consensus label and stores confidence scores. Comments in the code explain the key steps: text preprocessing, model execution, and report generation.
+\end{frame}
+
+\begin{frame}{Data and evaluation}
+The project uses real news articles from NewsAPI, so the text is messy like actual news and not like a clean demo dataset. That helps a lot, because sentiment on news is hard and headlines alone are usually not enough.
+
+\vspace{2mm}
+For checking the output, I compare the models against each other and look at the report files that get written to \pkg{data/reports/}. If later a small manually labeled set is added, it can be used to measure accuracy, precision, recall, and F1.
+\end{frame}
+
+\begin{frame}{NLP models used}
+\begin{itemize}
+    \item \textbf{VADER}: fast baseline, good for short text, but not always strong on long news.
+    \item \textbf{TextBlob}: easy to use, simple rule-style result.
+    \item \textbf{RoBERTa sentiment model}: slower, but better at context and more useful for full articles.
+\end{itemize}
+
+\vspace{2mm}
+The app does not rely on only one model. It uses all three and then takes the majority label. That helps when one model is too confident on a strange sentence.
+\end{frame}
+
+\begin{frame}{Iterative optimization}
+The biggest fixes during development were pretty basic but important:
+\begin{itemize}
+    \item use the full article text instead of just the headline
+    \item clean HTML before analysis
+    \item keep the three-model comparison
+    \item store reports so the last run is not lost
+    \item show the output in the browser right away
+\end{itemize}
+
+\vspace{2mm}
+These changes made the tool feel much more useful, because news text has a lot of noise and one model alone was giving too many wrong calls.
+\end{frame}
+
+\begin{frame}{Packaging, documentation and delivery}
+The project was prepared for non-technical delivery to the marketing department:
+\begin{itemize}
+    \item A CLI entrypoint (`cli.py`) was added so the tool can be run from a command prompt.
+    \item Packaging notes and a helper build script (`build_exe.bat`) allow creation of a single-file Windows executable with `pyinstaller`.
+    \item Documentation: `docs/UserGuide.md` (for marketing users) and `docs/DeveloperGuide.md` (for maintainers) were included.
+    \item Observability: `logging` replaced `print()` calls and a `requirements.pinned.txt` file was added for reproducible installs.
+\end{itemize}
+These changes make the deliverable more suitable for deployment and everyday use by non-technical stakeholders.
+\end{frame}
+
+\begin{frame}{Result and reflection}
+At the end of this phase the project became a working news sentiment tool. It can fetch articles, clean the text, analyze the sentiment, and keep the result in a report. The code is still small and simple, but it now follows the plan from the conception phase much better.
+
+\vspace{2mm}
+The main lesson is that news sentiment is not easy. Full text works better than headlines, and comparing more than one model gives a more honest result.
+\end{frame}
+
+
+
+\end{document}

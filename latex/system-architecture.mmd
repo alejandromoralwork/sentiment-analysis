@@ -1,0 +1,46 @@
+flowchart TD
+    User[User opens the web app and enters a keyword]
+
+    subgraph Frontend[Frontend]
+        UI[HTML/CSS/JavaScript dashboard]
+        WS[WebSocket connection]
+    end
+
+    subgraph Backend[FastAPI Backend]
+        API[app.py FastAPI routes]
+        Fetch[src/news_fetcher.py]
+        Clean[Article extraction and preprocessing]
+        Ensemble[src/sentiment.py ensemble]
+        Report[src/reporting.py]
+    end
+
+    subgraph Models[Sentiment Models]
+        VADER[VADER]
+        TextBlob[TextBlob]
+        Transformer[Transformer model]
+    end
+
+    subgraph External[External Services and Outputs]
+        NewsAPI[NewsAPI]
+        Pages[Article web pages]
+        Files[data/reports CSV and JSON files]
+    end
+
+    User --> UI
+    UI --> WS
+    WS --> API
+    API --> Fetch
+    Fetch --> NewsAPI
+    Fetch --> Pages
+    Fetch --> Clean
+    Clean --> Ensemble
+    Ensemble --> VADER
+    Ensemble --> TextBlob
+    Ensemble --> Transformer
+    VADER --> Ensemble
+    TextBlob --> Ensemble
+    Transformer --> Ensemble
+    Ensemble --> Report
+    Report --> Files
+    Report --> WS
+    WS --> UI

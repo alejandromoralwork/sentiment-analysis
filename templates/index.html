@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="min-h-screen bg-stone-100 text-stone-900">
+    <!-- page tries to load the last saved report when it opens -->
+    <script>
+        // just put the server data into the page so js can use it
+        window.__INITIAL_RESULTS__ = {{ initial_results | tojson }};
+    </script>
+
+    <main class="min-h-screen bg-stone-100">
+        <div class="mx-auto max-w-[1400px] px-4 py-6 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_360px]">
+                <section>
+                    <header class="mb-6 border border-stone-300 bg-white p-6">
+                        <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                            <div class="max-w-3xl">
+                                <p class="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-stone-500">News Sentiment Dashboard</p>
+                                <h1 class="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">Sentiment analysis with saved results loaded at startup</h1>
+                                <p class="mt-3 max-w-2xl text-sm leading-6 text-stone-600 sm:text-base">
+                                    Run a fresh analysis or inspect the latest report from data/reports directly in this dashboard.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 text-sm">
+                                <div class="border border-stone-300 bg-stone-50 px-4 py-3">
+                                    <div class="text-stone-500">Saved reports</div>
+                                    <div class="mt-1 text-base font-semibold text-stone-800">data/reports</div>
+                                </div>
+                                <div class="border border-stone-300 bg-stone-50 px-4 py-3">
+                                    <div class="text-stone-500">Live updates</div>
+                                    <div class="mt-1 text-base font-semibold text-stone-800">WebSocket</div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <section class="mb-6 border border-stone-300 bg-white p-5">
+                        <div class="grid gap-4 lg:grid-cols-[1.4fr,0.8fr,auto] lg:items-end">
+                            <div>
+                                <label for="keyword" class="mb-2 block text-sm font-medium text-stone-700">Search Keyword</label>
+                                <input type="text" id="keyword" value="Tesla" placeholder="e.g., Tesla, AI, Technology" class="w-full border border-stone-300 bg-white px-4 py-3 text-stone-900 outline-none placeholder:text-stone-400 focus:border-stone-500">
+                            </div>
+                            <div>
+                                <label for="numArticles" class="mb-2 block text-sm font-medium text-stone-700">Number of Articles</label>
+                                <input type="number" id="numArticles" min="1" max="500" value="10" class="w-full border border-stone-300 bg-white px-4 py-3 text-stone-900 outline-none focus:border-stone-500">
+                            </div>
+                            <button id="analyzeBtn" onclick="startAnalysis()" class="inline-flex items-center justify-center border border-stone-700 bg-stone-700 px-5 py-3 font-semibold text-white transition hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-60">
+                                Start Analysis
+                            </button>
+                        </div>
+                    </section>
+
+                    <section id="loading" class="hidden mb-6 border border-stone-300 bg-stone-50 p-5 text-center">
+                        <div class="mx-auto mb-3 h-10 w-10 animate-spin rounded-full border-4 border-stone-300 border-t-stone-700"></div>
+                        <p class="text-sm font-medium text-stone-700">Analyzing articles...</p>
+                    </section>
+
+                    <section id="analyticsGrid" class="hidden mb-6 grid gap-5 xl:grid-cols-3">
+                        <div class="border border-stone-300 bg-white p-5 xl:col-span-1">
+                            <h3 class="text-lg font-semibold text-stone-900">Summary Statistics</h3>
+                            <dl class="mt-5 space-y-3 text-sm">
+                                <div class="flex items-center justify-between border border-stone-200 bg-stone-50 px-4 py-3">
+                                    <dt class="text-stone-600">Total Articles</dt>
+                                    <dd id="totalArticles" class="font-semibold text-stone-900">0</dd>
+                                </div>
+                                <div class="flex items-center justify-between border border-stone-200 bg-stone-50 px-4 py-3">
+                                    <dt class="text-stone-600">Positive (Avg)</dt>
+                                    <dd id="avgPositive" class="font-semibold text-stone-900">0%</dd>
+                                </div>
+                                <div class="flex items-center justify-between border border-stone-200 bg-stone-50 px-4 py-3">
+                                    <dt class="text-stone-600">Negative (Avg)</dt>
+                                    <dd id="avgNegative" class="font-semibold text-stone-900">0%</dd>
+                                </div>
+                                <div class="flex items-center justify-between border border-stone-200 bg-stone-50 px-4 py-3">
+                                    <dt class="text-stone-600">Neutral (Avg)</dt>
+                                    <dd id="avgNeutral" class="font-semibold text-stone-900">0%</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="border border-stone-300 bg-white p-5 xl:col-span-1">
+                            <h3 class="text-lg font-semibold text-stone-900">Model Comparison</h3>
+                            <dl class="mt-5 space-y-3 text-sm">
+                                <div class="flex items-center justify-between border border-stone-200 bg-stone-50 px-4 py-3">
+                                    <dt class="text-stone-600">VADER Avg</dt>
+                                    <dd id="vaderAvg" class="font-semibold text-stone-900">0.000</dd>
+                                </div>
+                                <div class="flex items-center justify-between border border-stone-200 bg-stone-50 px-4 py-3">
+                                    <dt class="text-stone-600">TextBlob Avg</dt>
+                                    <dd id="textblobAvg" class="font-semibold text-stone-900">0.000</dd>
+                                </div>
+                                <div class="flex items-center justify-between border border-stone-200 bg-stone-50 px-4 py-3">
+                                    <dt class="text-stone-600">Transformer Avg</dt>
+                                    <dd id="transformerAvg" class="font-semibold text-stone-900">0.000</dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="border border-stone-300 bg-white p-5 xl:col-span-1">
+                            <h3 class="text-lg font-semibold text-stone-900">Sentiment Distribution</h3>
+                            <div class="mt-5 h-72">
+                                <canvas id="sentimentChart"></canvas>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="resultsTable" class="hidden mb-6 border border-stone-300 bg-white p-5">
+                        <div class="mb-4 flex items-center justify-between gap-3">
+                            <h3 class="text-lg font-semibold text-stone-900">Detailed Results</h3>
+                            <p class="text-sm text-stone-500">Labels are rendered directly from the saved report.</p>
+                        </div>
+                        <div class="overflow-hidden border border-stone-300">
+                            <div class="max-h-[30rem] overflow-auto">
+                                <table class="min-w-full divide-y divide-stone-200 text-left text-sm">
+                                    <thead class="sticky top-0 z-10 bg-stone-100 text-xs uppercase tracking-wide text-stone-600">
+                                        <tr>
+                                            <th class="px-4 py-3">Headline</th>
+                                            <th class="px-4 py-3">VADER</th>
+                                            <th class="px-4 py-3">TextBlob</th>
+                                            <th class="px-4 py-3">Transformer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="resultsBody" class="divide-y divide-stone-100 bg-white text-stone-900"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="emptyState" class="hidden border border-dashed border-stone-300 bg-white p-10 text-center text-stone-600">
+                        <p class="text-lg font-medium text-stone-900">No saved results yet.</p>
+                        <p class="mt-2 text-sm text-stone-500">Run an analysis once and the latest report will appear here automatically on the next page load.</p>
+                    </section>
+                </section>
+
+                <aside id="cliConsole" class="h-[calc(100vh-3rem)] border border-stone-300 bg-white p-4">
+                    <h2 class="mb-3 border-b border-stone-200 pb-2 text-sm font-semibold uppercase tracking-wide text-stone-700">Console</h2>
+                    <!-- console stays here the whole time, useful while testing -->
+                    <div id="cliOutput" class="h-[calc(100%-2.5rem)] space-y-2 overflow-y-auto font-mono text-sm"></div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

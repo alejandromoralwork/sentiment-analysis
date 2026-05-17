@@ -1,0 +1,6 @@
+headline,url,consensus_sentiment,confidence,vader_sentiment,textblob_sentiment,transformer_sentiment
+"Tesla Wants a $50,000 Penalty for Anyone Who Tries to Resell Its Signature Model S and X",https://gizmodo.com/tesla-wants-a-50000-penalty-for-anyone-who-tries-to-resell-its-signature-model-s-and-x-2000747590,negative,0.33,negative,positive,neutral
+Tesla Recalls Cybertrucks Over Concerns Their Wheels Could Come Off,https://gizmodo.com/tesla-recalls-cybertrucks-over-concerns-their-wheels-could-come-off-2000756284,neutral,0.67,negative,neutral,neutral
+Tesla Says EV Orders Benefitted From Soaring Gas Prices,https://gizmodo.com/tesla-says-ev-orders-benefitted-from-soaring-gas-prices-2000749762,positive,0.67,positive,positive,neutral
+Tesla Reveals Mysterious $2 Billion AI Hardware Deal in SEC Filing,https://gizmodo.com/tesla-reveals-mysterious-2-billion-ai-hardware-deal-in-sec-filing-2000750025,positive,1.0,positive,positive,positive
+SpaceX Becoming a Publicly Traded Company May Rob Elon Musk of a Cool Source of Easy Cash,https://gizmodo.com/spacex-becoming-a-publicly-traded-company-may-rob-elon-musk-of-a-cool-source-of-easy-cash-2000748851,positive,0.67,positive,positive,negative

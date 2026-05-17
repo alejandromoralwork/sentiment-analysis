@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{verbatim}
+
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black}
+
+\begin{document}
+
+\begin{center}
+    \Large\textbf{1.1.3 Conception Phase} \\
+    \vspace{2mm}
+\subtitle{Sentiment analysis from news articles - Project: Artificial Intelligence
+(DLBDSEAIS02)}
+   
+    \date{\href{https://github.com/alejandromoralwork/sentiment-analysis}{GitHub Link}}
+\end{center}
+
+\vspace{4mm}
+
+\section*{1. Project Goal and Scope}
+The primary goal of this project is to develop a sentiment analysis application for the marketing department. The system will analyze public perception of the company by identifying the sentiment (positive, neutral, or negative) of recent news articles based on a given keyword (e.g., the company name). This tool will provide actionable insights into market sentiment, helping to guide marketing strategy and public relations efforts.
+
+\section*{2. System Architecture and Process}
+The application is designed as a modular, web-based tool that provides real-time feedback to the user. The process flow is designed to be robust and transparent, from data acquisition to final analysis.
+
+\subsection*{2.1. Process Diagram}
+The following architecture diagram is included as a JPG image. The chart source is stored in a separate file so it can be edited independently and exported again when needed.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{system-architecture.jpg}
+    \caption{System Architecture and Data Flow}
+\end{figure}
+
+\subsection*{2.2. Process Steps}
+\begin{enumerate}
+    \item \textbf{User Input:} The user provides a keyword through a simple web interface.
+    \item \textbf{News Fetching:} The backend fetches a list of recent news articles related to the keyword from NewsAPI.
+    \item \textbf{Content Extraction:} For each article, the system navigates to the URL and extracts the full text content, stripping away HTML, ads, and other irrelevant elements.
+    \item \textbf{Sentiment Analysis:} The cleaned text is analyzed by an ensemble of three different sentiment analysis models.
+    \item \textbf{Reporting:} The results, including the sentiment from each model and a final consensus score, are saved to structured data files (CSV and JSON) for archival and further analysis.
+    \item \textbf{Feedback:} Live progress and the final results are streamed back to the user's web interface via WebSockets.
+\end{enumerate}
+
+\section*{3. Classification and Validation Strategy}
+Given the subjective and nuanced nature of sentiment in news articles, relying on a single model can be unreliable. This project employs an ensemble-based approach for both classification and validation.
+
+\begin{itemize}
+    \item \textbf{Classification:} The final sentiment label for an article is determined by a majority vote from the three models. This "consensus" approach mitigates the risk of a single model's error or bias dominating the result.
+    \item \textbf{Validation:} The quality of the classification is validated internally by measuring the level of agreement between the models. A "confidence" score is calculated based on the proportion of models that agree on the consensus label (e.g., 1.0 if all three agree, 0.67 if two agree). A low confidence score indicates a contentious article that may require manual review, providing an inherent quality metric without needing a pre-labeled dataset. This method allows the marketing team to focus on high-confidence results and flag ambiguous ones.
+\end{itemize}
+
+This structure was chosen because it provides a more robust and trustworthy result than a single-model system. It delivers not just a classification, but also a measure of its reliability.
+
+\section*{4. Frameworks and Tools}
+The technology stack was selected to be modern, efficient, and well-suited for NLP tasks and web-based delivery, using Python as the core language.
+\begin{itemize}
+    \item \textbf{Backend Framework:} \href{https://fastapi.tiangolo.com/}{FastAPI} was chosen for its high performance, asynchronous capabilities (essential for handling I/O-bound tasks like fetching articles), and native support for WebSockets, which enables a responsive user experience.
+    \item \textbf{News Source:} \href{https://newsapi.org/}{NewsAPI} provides a simple and effective way to source recent news articles from a wide variety of publications.
+    \item \textbf{Content Extraction:} \href{https://www.crummy.com/software/BeautifulSoup/bs4/doc/}{BeautifulSoup4} and \href{https://requests.readthedocs.io/en/latest/}{Requests} are used to download and parse the HTML of news articles, extracting the core text content.
+    \item \textbf{Sentiment Models:}
+        \begin{itemize}
+            \item \textbf{VADER} and \textbf{TextBlob}: These lexicon-based models are fast and provide a good baseline.
+            \item \textbf{Transformers (RoBERTa-based)}: A state-of-the-art model from Hugging Face (`cardiffnlp/twitter-roberta-base-sentiment-latest`) is used for its ability to understand context and nuance, providing a much more accurate analysis for complex sentences found in news.
+        \end{itemize}
+    \item \textbf{Data Handling:} \href{https://pandas.pydata.org/}{Pandas} is used for creating and managing the final CSV reports, which are easily opened in Excel or other data analysis tools.
+    \item \textbf{Executable Packaging:} \href{https://www.pyinstaller.org/}{PyInstaller} is planned for packaging the application into a single standalone executable for easy distribution to the marketing department, removing any need for them to interact with Python or code.
+\end{itemize}
+This combination of tools provides a powerful and flexible foundation for building, validating, and deploying the sentiment analysis application effectively.
+
+\end{document}

@@ -1,0 +1,24 @@
+
+# Minimal requirements. For reproducible installs, use the pinned file:
+# pip install -r requirements.pinned.txt
+
+newsapi-python
+requests
+beautifulsoup4
+vaderSentiment
+textblob
+transformers
+torch
+fastapi
+uvicorn[standard]
+pandas
+python-dotenv
+scikit-learn
+jinja2
+python-multipart
+
+# Note: see requirements.pinned.txt for an example with exact versions.
+# For web framework
+
+fastapi
+

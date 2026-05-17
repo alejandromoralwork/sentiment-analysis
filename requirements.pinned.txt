@@ -1,0 +1,19 @@
+# Example pinned requirements for reproducible installs
+# These are example versions. Adjust to your environment (CPU/GPU) as needed.
+newsapi-python==0.2.7
+requests==2.31.0
+beautifulsoup4==4.12.2
+vaderSentiment==3.3.2
+textblob==0.17.1
+transformers==4.30.2
+torch==2.2.0
+fastapi==0.95.2
+uvicorn==0.22.0
+pandas==2.2.2
+python-dotenv==1.0.0
+scikit-learn==1.2.2
+jinja2==3.1.2
+python-multipart==0.0.6
+
+# If you are on CPU-only machines, consider installing a CPU-only torch wheel
+# or using the appropriate PyTorch index as described in the PyTorch docs.
